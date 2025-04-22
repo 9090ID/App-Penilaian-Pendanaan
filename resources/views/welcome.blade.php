@@ -4,9 +4,30 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Kemahasiswaan-Penilaian Kegiatan</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <title>Kemahasiswaan UNJA - Sistem Penilaian Kegiatan Mahasiswa</title>
+    <meta name="title" content="Kemahasiswaan UNJA - Penilaian Kegiatan Mahasiswa">
+    <meta name="description"
+        content="Sistem Penilaian Kegiatan Mahasiswa Universitas Jambi tahun {{ date('Y') }}. Cek program seperti PPK Ormawa, PKM, P2MW, PMW, dan lainnya.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="Kemahasiswaan UNJA - Penilaian Kegiatan Mahasiswa">
+    <meta property="og:description"
+        content="Sistem Penilaian Kegiatan Pendanaan Mahasiswa Universitas Jambi tahun {{ date('Y') }}. Cek berbagai program kemahasiswaan.">
+    <meta property="og:image" content="{{ asset('12.png') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="Kemahasiswaan UNJA - Penilaian Kegiatan Mahasiswa">
+    <meta property="twitter:description"
+        content="Sistem Penilaian Kegiatan Pendanaan Mahasiswa Universitas Jambi tahun {{ date('Y') }}. Cek berbagai program unggulan.">
+    <meta property="twitter:image" content="{{ asset('12.png') }}">
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Kemahasiswaan UNJA">
 
     <!-- Favicons -->
     <link href="{{ asset('12.png') }}" rel="icon">
@@ -49,21 +70,21 @@
                 <h1 class="sitename">Kemahasiswaan UNJA</h1>
             </a>
 
-             <nav id="navmenu" class="navmenu">
-               {{-- <ul>
+            <nav id="navmenu" class="navmenu">
+                {{-- <ul>
                     {{-- <li><a href="index.html" class="active">Home</a></li>
             </li> --}}
-                    {{-- <li><a href="{{ route('layanan') }}">Layanan</a></li> --}}
-                    {{-- <li><a href="resume.html">Prestasi</a></li>
+                {{-- <li><a href="{{ route('layanan') }}">Layanan</a></li> --}}
+                {{-- <li><a href="resume.html">Prestasi</a></li>
                     <li><a href="services.html">Beasiswa</a></li>
                     <li><a href="portfolio.html">Berkas</a></li> --}}
-                    {{-- <li><a href="{{ route('login') }}">Login</a></li>
-                </ul>--}}
+                {{-- <li><a href="{{ route('login') }}">Login</a></li>
+                </ul> --}}
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-            </nav> 
+            </nav>
 
             <div class="header-social-links">
-                <a href="{{ route('login') }}" ><i class="bi bi-lock"></i>Login</a>
+                <a href="{{ route('login') }}"><i class="bi bi-lock"></i>Login</a>
                 {{-- <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
                 <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
                 <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a> --}}
@@ -72,17 +93,18 @@
         </div>
     </header>
 
-@yield('content')
+    @yield('content')
 
 
-<footer id="footer" class="footer light-background py-3" style="font-size: 0.9rem;">
-    <div class="container">
-        <div class="copyright text-center">
-            <p class="mb-1">© <span>Copyright</span> <strong class="px-1 sitename">KM</strong> All Rights Reserved</p>
-            <small>Designed by Kemahasiswaan Universitas Jambi</small>
+    <footer id="footer" class="footer light-background py-3" style="font-size: 0.9rem;">
+        <div class="container">
+            <div class="copyright text-center">
+                <p class="mb-1">© <span>Copyright</span> <strong class="px-1 sitename">KM</strong> All Rights Reserved
+                </p>
+                <small>Designed by Kemahasiswaan Universitas Jambi -</small>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
 
     <!-- Scroll Top -->
